@@ -7,8 +7,9 @@
 Інструмент: n8n
 
 Промпт:
-```Create a warm, cheerful good morning message in Ukrainian for Odessa, Ukraine based on this weather forecast data: {{ $('Get Weather Forecast').item.json.body }}. Start with "Доброго ранку!" and end with "Гарного дня!". Keep it friendly and concise. Write the entire message in Ukrainian language.```
+```Create a warm, cheerful good morning message in Ukrainian based on this weather forecast data: {{ $('Get Weather Forecast').item.json.body }}. Start with "Доброго ранку!" and end with "Гарного дня!". Keep it friendly and concise. Write the entire message in Ukrainian language.```
 
+Реалізація: Кожен день о восьму годину, активується робочий процес, який збирає прогноз погоди з https://api.open-meteo.com, використовуючи координати, вказані користувачем, або якщо іх нема, то за замовчуванням використовується локація Одеса, Україна. Отриманий прогноз підсумовується ШІ, додаючи дружнє побажання користувачеві мати гарний день. Після цього, текст від ШІ відправляється користовачу через телеграм бота, створенного в @BotFather. Користувач може відправити геолокацію телеграм-боту, щоб змінити локацію для прогнозу.
 
 [Робочий процесс:](./image.png)
 
