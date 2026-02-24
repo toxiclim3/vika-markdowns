@@ -10,3 +10,6 @@
 ```Create a warm, cheerful good morning message in Ukrainian for Odessa, Ukraine based on this weather forecast data: {{ $('Get Weather Forecast').item.json.body }}. Start with "Доброго ранку!" and end with "Гарного дня!". Keep it friendly and concise. Write the entire message in Ukrainian language.```
 
 
+[Робочий процесс:](./image.png)
+
+Проблеми: Використання API від OpenAI потребує оплати, але не було можливості сплатити план, тому не було також можливости протестувати робочий процесс боту
